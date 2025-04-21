@@ -1,3 +1,4 @@
+using MongoProject.Middleware;
 using MongoProject.Repositories;
 using MongoProject.Services;
 using MongoProject.Settings;
@@ -30,6 +31,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseCustomExceptionMiddleware();
 
 app.MapControllers();
 

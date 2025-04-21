@@ -1,0 +1,6 @@
+services:
+  mongoproject:
+    image: ${DOCKER_REGISTRY-}mongoproject
+    build:
+      context: .
+      dockerfile: MongoProject/Dockerfile
